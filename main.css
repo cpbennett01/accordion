@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+    max-width: 900px;
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    align-content: center;
+    background-color: rgb(0, 0, 0);
+}
+
+
+#ash-pile1, #ash-pile2, #ash-pile3 {
+    position: absolute;
+    opacity: 0%;
+    transition: 1s;
+    margin-left: 280px;
+    margin-top: 682px;
+    
+}
+
+.filter {
+    position: relative;
+    height: 40px;
+    width: 120px;
+    background-color: rgb(211, 120, 9);
+    float: right;
+    
+}
+
+.paper {
+    position: relative;
+    height: 40px;
+    width: 400px;
+    background-color: wheat;
+    display: flex;
+    float: right;
+    transition-duration: 3s;
+    
+    
+}
+
+.ash {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-around;
+    height: 40px;
+    width: 30px;
+    background-color:rgb(66, 42, 29);
+    float: left;
+    
+}
+
+.burn {
+    position: relative;
+    height: 12px;
+    width: 12px;
+    background-color: rgb(54, 47, 42);
+    border-radius: 30%;
+}
+
+    .ash1, .ash5, .ash3, .ash4, .ash2, .ash6{
+        position: relative;
+    }
+
+    .ash1, .ash4, .ash5 {
+        animation: burn 3s 3s infinite ease-in-out alternate
+    }
+
+    @keyframes burn {
+        0% {
+            background: rgb(54, 46, 42);
+            filter: blur(3px);
+        }
+        50% {
+            background-color: rgb(135, 39, 19);
+            filter: blur(5px);
+        }
+        100% {
+            background-color: rgb(181, 82, 6);
+            filter: blur(3px);
+        }
+    }
+
+    .ash2, .ash3, .ash6 {
+        animation: burn 3s infinite ease-in-out alternate
+    }
+
+    @keyframes burn {
+        0% {
+            background: rgb(54, 47, 42);
+            filter: blur(3px);
+        }
+        50% {
+            background-color: rgb(135, 39, 19);
+            filter: blur(5px);
+        }
+        100% {
+            background-color: rgb(181, 82, 6);
+            filter: blur(3px);
+        }
+    }
+
+
+
+.fire {
+    position: relative;
+    height: 40px;
+    width: 7px;
+    background-color: rgb(196, 74, 3);
+    float: left;
+    transition-duration: 1s;
+}
+
+.smoke, .smoke1, .smoke2 {
+    position: relative;
+    float: left;
+    opacity: 0%;
+    background-color: rgb(130, 130, 130);
+    height: 12px;
+    width: 12px;
+
+}
+
+@media screen and (max-width: 1400px) {
+
+    .paper {
+        width: 350px;
+    }
+    .fire {
+        filter: brightness(50%);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .paper {
+        width: 300px;
+    }
+    .fire {
+        filter: brightness(100%);
+    }
+}
+
+@media screen and (max-width: 1050px) {
+
+    .paper {
+        width: 250px;
+    }
+    .fire {
+        filter: brightness(50%);
+    }
+}
+
+@media screen and (max-width: 950px) {
+
+    .paper {
+        width: 200px;
+    }
+    .fire {
+        filter: brightness(100%);
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .paper {
+        width: 150px;
+    }
+    .fire {
+        filter: brightness(50%);
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .paper {
+        width: 75px;
+    }
+    .fire {
+        filter: brightness(100%);
+        background-color: rgb(155, 154, 154);
+    }
+    #ash-pile1 {
+        animation: pile 2s 1 ease-in;
+    }
+
+        @keyframes pile {
+            0% {
+               opacity: 50%; 
+            }
+            100% {
+                opacity: 100%;
+            }
+        }
+    
+    #ash-pile2 {
+    animation: pile 2s 2s 1 ease-in-out;
+    }
+    
+            @keyframes pile {
+                0% {
+                   opacity: 100%; 
+                }
+                100% {
+                    opacity: 100%;
+                }
+            }
+
+    #ash-pile3 {
+        animation: pile 2s 4s ease-in;
+        animation-fill-mode: forwards;
+    }
+
+        @keyframes pile {
+            0% {
+               opacity: 100%; 
+            }
+            100% {
+                opacity: 100%;
+            }
+        }
+
+
+
+    .ash1, .ash4, .ash5 {
+        animation: burn 3s 3s infinite ease-in-out alternate
+    }
+
+    @keyframes burn {
+        0% {
+            background: rgb(54, 47, 42);
+            filter: blur(2px);
+            
+        }
+        50% {
+            background-color: rgb(79, 70, 68);
+            filter: blur(5px);
+        }
+        100% {
+            background-color: rgb(140, 133, 129);
+            filter: blur(2px);
+        }
+    }
+
+    .ash2, .ash3, .ash6 {
+        animation: burn 3s infinite ease-in-out alternate
+    }
+
+    @keyframes burn {
+        0% {
+            background: rgb(54, 47, 42);
+            filter: blur(2px);
+            
+        }
+        50% {
+            background-color: rgb(124, 120, 119);
+            filter: blur(5px);
+        }
+        100% {
+            background-color: rgb(106, 104, 101);
+            filter: blur(2px);
+        }
+    }
+
+    .smoke, .smoke1 {
+        animation: smoke 4s infinite ease-out;
+    }
+
+    @keyframes smoke {
+        0% {
+            opacity: 0%;
+        }
+
+        80% {
+            opacity: 100%
+        }
+
+        100% {
+            transform: translateY(3000%);
+        }
+    }
+}
